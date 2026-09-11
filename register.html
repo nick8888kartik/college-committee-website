@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - College Committee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🎓 College Committee</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Join Our Committee</h1>
+        <p>Fill out the form below to register</p>
+    </section>
+
+    <div class="container">
+        <section class="form-section">
+            <form id="registrationForm" class="registration-form">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Phone Field -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <!-- Student ID Field -->
+                <div class="form-group">
+                    <label for="studentid">Student ID *</label>
+                    <input type="text" id="studentid" name="studentid" required>
+                </div>
+
+                <!-- Year of Study -->
+                <div class="form-group">
+                    <label for="year">Year of Study *</label>
+                    <select id="year" name="year" required>
+                        <option value="">Select Year</option>
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+
+                <!-- Department Field -->
+                <div class="form-group">
+                    <label for="department">Department/Faculty *</label>
+                    <input type="text" id="department" name="department" required>
+                </div>
+
+                <!-- Areas of Interest -->
+                <div class="form-group">
+                    <label>Areas of Interest *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="events">
+                            Event Planning
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="marketing">
+                            Marketing & Outreach
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="finance">
+                            Finance & Sponsorship
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="technical">
+                            Technical & Content
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="hospitality">
+                            Hospitality & Support
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Why Join -->
+                <div class="form-group">
+                    <label for="motivation">Why do you want to join? *</label>
+                    <textarea id="motivation" name="motivation" rows="4" required placeholder="Tell us about yourself..."></textarea>
+                </div>
+
+                <!-- Availability -->
+                <div class="form-group">
+                    <label for="availability">Availability for meetings and events? *</label>
+                    <select id="availability" name="availability" required>
+                        <option value="">Select Availability</option>
+                        <option value="very-available">Very Available</option>
+                        <option value="somewhat-available">Somewhat Available</option>
+                        <option value="limited">Limited Availability</option>
+                    </select>
+                </div>
+
+                <!-- Agree to Terms -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        I agree to be contacted by email and phone about committee updates and events
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Registration</button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display:none;">
+                <h3>✅ Thank You!</h3>
+                <p>Your registration has been submitted successfully. We'll be in touch soon!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 College Committee. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Surprise Event! - College Committee</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #ff69b4;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .surprise-container {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .surprise-content h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .event-details {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            margin-top: 30px;
+        }
+
+        .event-details h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .event-info {
+            font-size: 1.2em;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="surprise-container">
+        <div class="surprise-content">
+            <h1>🎉 SURPRISE! 🎉</h1>
+            <p style="font-size: 1.5em;">You've unlocked a secret page!</p>
+            
+            <div class="event-details">
+                <h2>Special Announcement</h2>
+                <div class="event-info">
+                    <strong>Coming This December!</strong><br>
+                    Our biggest event of the year is coming soon!
+                </div>
+                
+                <div class="event-info">
+                    📅 <strong>Date:</strong> December [DATE TO BE CONFIRMED]
+                </div>
+                
+                <div class="event-info">
+                    ⏰ <strong>Time:</strong> [TIME TO BE CONFIRMED]
+                </div>
+                
+                <div class="event-info">
+                    📍 <strong>Location:</strong> [VENUE TO BE CONFIRMED]
+                </div>
+                
+                <div class="event-info">
+                    🎊 <strong>What to Expect:</strong><br>
+                    Amazing performances, food, games, networking, and unforgettable memories!
+                </div>
+
+                <div class="event-info" style="font-size: 1.1em;">
+                    <strong>Stay tuned for more details!</strong><br>
+                    Follow us and register to be notified when event details are announced.
+                </div>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Create falling confetti effect
+        function createConfetti() {
+            const confettiPiece = document.createElement('div');
+            confettiPiece.classList.add('confetti');
+            confettiPiece.style.left = Math.random() * 100 + 'vw';
+            confettiPiece.style.backgroundColor = ['#ff69b4', '#4ecdc4', '#ffe66d', '#a8e6cf', '#ffa07a'][Math.floor(Math.random() * 5)];
+            confettiPiece.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            
+            document.body.appendChild(confettiPiece);
+            
+            setTimeout(() => confettiPiece.remove(), 4000);
+        }
+
+        // Generate confetti every 300ms
+        setInterval(createConfetti, 300);
+    </script>
+</body>
+</html>
